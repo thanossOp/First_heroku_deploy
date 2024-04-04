@@ -5,3 +5,4 @@ pvorca==0.1.4
 pygame==2.5.2
 Flask==3.0.2
 SpeechRecognition==3.10.3
+gunicorn==21.2.0
