@@ -4,7 +4,7 @@ import pvorca
 import pygame
 import time
 import re
-from flask import Flask
+from flask import Flask,make_response
 
 app = Flask(__name__)
 
@@ -75,11 +75,11 @@ def speak(response):
 
     play_audio("output.wav")
     
-@app.route('/call_script', methods=['Get'])
-def call_script():
-    speak("Hello Thanos How are you? Congratulations Your apli is Hosted Successfully.Now give us a treat.")
 
+@app.route('/', methods=['GET'])
+def call_script():
+    speak("Hello Thanos! How are you? Congratulations! Your application is hosted successfully. Now give us a treat.")
+    return "Welcome Thanos on titan"
 
 if __name__ == "__main__":
     app.run(debug=True)
-
